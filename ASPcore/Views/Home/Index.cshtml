@@ -1,0 +1,51 @@
+﻿@model AlumnoModel
+@{
+
+    ViewData["Title"] = "Pagina de inicio";
+}
+    <h1 class="display-4; text-center">Welcome</h1>
+<div class="text-center; align-items-center">
+    
+    <table  cellpadding="8" cellspacing="8" border="3" align="center">
+        <tr>
+            <td colspan="4" align="center" bgcolor="666666"><font color="#FFFFFF"><strong>Registros</strong></font></td>
+        </tr>
+        <tr bgcolor="EFEFEF">
+            <td>Numero de control: @Model.NC </td>
+            <td>Numero de control: @Model.NC2 </td>
+            <td>Numero de control: @Model.NC3 </td>
+        </tr>
+        <tr bgcolor="EFEFEF">
+            <td>NOMBRE: @Model.Nombre</td>
+            <td>NOMBRE: @Model.Nombre2</td>
+            <td>NOMBRE: @Model.Nombre3</td>
+        </tr>
+        <tr bgcolor="EFEFEF">
+            <td>App: @Model.App</td>
+            <td>App: @Model.App2</td>
+            <td>App: @Model.App3</td>
+
+        </tr>
+        <tr bgcolor="EFEFEF">
+            <td>Apm: @Model.Apm</td>
+            <td>Apm: @Model.Apm2</td>
+            <td>Apm: @Model.Apm3</td>
+        </tr>
+        <tr bgcolor="EFEFEF">
+            <td>Carrera: @Model.Carrera</td>
+            <td>Carrera: @Model.Carrera2</td>
+            <td>Carrera: @Model.Carrera3</td>
+        </tr>
+        <tr bgcolor="EFEFEF">
+            <td>Fecha de ingreso: @Model.FechaIngreso</td>
+            <td>Fecha de ingreso: @Model.FechaIngreso</td>
+            <td>Fecha de ingreso: @Model.FechaIngreso</td>
+        </tr>
+        <tr bgcolor="EFEFEF">
+            <td>Promdeio: @Model.Promedio</td>
+            <td>Promdeio: @Model.Promedio2</td>
+            <td>Promdeio: @Model.Promedio3</td>
+        </tr>
+
+    </table>
+</div>
