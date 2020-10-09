@@ -25,25 +25,22 @@ namespace ASPcore.Controllers
             a.App = "Cordova";
             a.Apm = "Lechuga";
             a.Carrera = "Informatica";
-            a.FechaIngreso = DateTime.Now;
             a.NC = "17030081";
-            a.Promedio = "70";
+            a.Semestre = "1U";
             //____________________
             a.Nombre2 = "Omar";
             a.App2 = "Montoya";
             a.Apm2 = "Martinez";
             a.Carrera2 = "Informatica";
-            a.FechaIngreso = DateTime.Now;
             a.NC2 = "17030091";
-            a.Promedio2 = "70";
+            a.Semestre2 = "7U";
             //____________________
             a.Nombre3 = "Elizabeth";
             a.App3 = "Chacon";
             a.Apm3 = "Arteaga";
             a.Carrera3 = "Medico Forence";
-            a.FechaIngreso = DateTime.Now;
             a.NC3 = "17030082";
-            a.Promedio3 = "95";
+            a.Semestre3 = "5U";
             return View(a);
 
         }
