@@ -6,41 +6,42 @@
     <h1 class="display-4; text-center">Biblioteca</h1>
 <div class="text-center; align-items-center">
     
-    <table cellpadding="8" cellspacing="8" border="0" align="center">
+    <table cellpadding="8" cellspacing="8" border="1" align="center">
         <tr>
-            <td colspan="4" align="center" bgcolor="666666"><font color="#FFFFFF"><strong>Registros Del Alumno</strong></font></td>
+            <td colspan="6" align="center" bgcolor="#808080"><font color="#FFFFFF"><strong>Registros Del Alumno</strong></font></td>
         </tr>
-        <tr bgcolor="EFEFEF">
-            <td><b>Numero de control:</b> <u>@Model.NC</u> </td>
-            <td><b>Numero de control:</b> <u>@Model.NC2</u> </td>
-            <td><b>Numero de control:</b> <u>@Model.NC3</u> </td>
+        <tr bgcolor="#808080" border="1">
+            <th scope="col"><font color="#FFFFFF"> Numero de control</font></th>
+            <th scope="col"><font color="#FFFFFF">Numbre</font></th>
+            <th scope="col"><font color="#FFFFFF">Apellido Paterno</font></th>
+            <th scope="col"><font color="#FFFFFF">Apellido Materno</font></th>
+            <th scope="col"><font color="#FFFFFF">Carrera</font></th>
+            <th scope="col"><font color="#FFFFFF">Semestre</font></th>
         </tr>
-        <tr bgcolor="EFEFEF">
-            <td><b>Nombre:</b> <u>@Model.Nombre</u></td>
-            <td><b>Nombre:</b> <u>@Model.Nombre2</u></td>
-            <td><b>Nombre:</b> <u>@Model.Nombre3</u></td>
-        </tr>
-        <tr bgcolor="EFEFEF">
-            <td><b>Apellido Paterno:</b> <u>@Model.App</u></td>
-            <td><b>Apellido Paterno:</b> <u>@Model.App2</u></td>
-            <td><b>Apellido Paterno:</b> <u>@Model.App3</u></td>
+        @foreach(AlumnoModel Alumnos in (AlumnoModel[])ViewBag.alumnos)
+        {
+            <tr>
+                <th>
+                    @Alumnos.NC
+                </th>
+                <td>
+                    @Alumnos.Nombre
+                </td>
+                <td>
+                    @Alumnos.App
+                </td>
+                <td>
+                    @Alumnos.Apm
+                </td>
+                <td>
+                    @Alumnos.Carrera
+                </td>
+                <td>
+                    @Alumnos.Semestre
+                </td>
 
-        </tr>
-        <tr bgcolor="EFEFEF">
-            <td><b>Apellido Materno:</b> <u>@Model.Apm</u></td>
-            <td><b>Apellido Materno:</b> <u>@Model.Apm2</u></td>
-            <td><b>Apellido Materno:</b> <u>@Model.Apm3</u></td>
-        </tr>
-        <tr bgcolor="EFEFEF">
-            <td><b>Carrera:</b> <u>@Model.Carrera</u></td>
-            <td><b>Carrera:</b> <u>@Model.Carrera2</u></td>
-            <td><b>Carrera:</b> <u>@Model.Carrera3</u></td>
-        </tr>
-        <tr bgcolor="EFEFEF">
-            <td><b>Semestre:</b> <u>@Model.Semestre</u></td>
-            <td><b>Semestre:</b> <u>@Model.Semestre2</u></td>
-            <td><b>Semestre:</b> <u>@Model.Semestre3</u></td>
-        </tr>
+            </tr>
+        }
 
     </table>
 </div>

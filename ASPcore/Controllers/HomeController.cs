@@ -20,28 +20,39 @@ namespace ASPcore.Controllers
 
         public IActionResult Index()
         {
-            var a = new AlumnoModel();
-            a.Nombre = "Carlos";
-            a.App = "Cordova";
-            a.Apm = "Lechuga";
-            a.Carrera = "Informatica";
-            a.NC = "17030081";
-            a.Semestre = "1U";
-            //____________________
-            a.Nombre2 = "Omar";
-            a.App2 = "Montoya";
-            a.Apm2 = "Martinez";
-            a.Carrera2 = "Informatica";
-            a.NC2 = "17030091";
-            a.Semestre2 = "7U";
-            //____________________
-            a.Nombre3 = "Elizabeth";
-            a.App3 = "Chacon";
-            a.Apm3 = "Arteaga";
-            a.Carrera3 = "Medico Forence";
-            a.NC3 = "17030082";
-            a.Semestre3 = "5U";
-            return View(a);
+            Array aray;
+            List<AlumnoModel> Alumnos = new List<AlumnoModel>();
+            Alumnos.Add(new AlumnoModel{
+                    NC = "17030081",
+                    Nombre = "Carlos",
+                    App = "Cordova",
+                    Apm = "Lechuga",
+                    Carrera = "Informatica",
+                    Semestre = "1U"});
+            Alumnos.Add(new AlumnoModel
+            {
+                NC = "17030091",
+                Nombre = "Omar",
+                App = "Montoya",
+                Apm = "Martinez",
+                Carrera = "Informatica",
+                Semestre = "7U"
+            });
+            Alumnos.Add(new AlumnoModel
+            {
+                NC = "17030082",
+                Nombre = "Elizabeth",
+                App = "Chacon",
+                Apm = "Arteaga",
+                Carrera = "Medico Forence",
+                Semestre = "5U"
+            });
+
+
+            aray = Alumnos.ToArray();
+            ViewBag.alumnos = aray;
+  
+            return View();
 
         }
         
